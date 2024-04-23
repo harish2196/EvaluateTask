@@ -1,4 +1,7 @@
 package com.chainsys.abs;
+
+import java.util.Scanner;
+
 abstract class Student {
 	String name;
 	int age;
@@ -70,17 +73,35 @@ class CollegeStudent extends Student {
 		System.out.println("Name: "+ name + "\nAge: "+ age );	
 	}
 }
-public class StudentDetail {
-	public static void main(String[] args) {
-		Student highSchoolStudent = new HighSchoolStudent("Harish", 22, 9);
-		Student collegeStudent = new CollegeStudent("Balaji", 20, "Computer Science");
 
-		highSchoolStudent.getDetails();
-		System.out.println();
-		collegeStudent.getDetails();
-		System.out.println();
-		System.out.println("StudentDetails: ");
-		collegeStudent.displayDetails();
-		
-	}
+
+public class StudentDetail {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter name of High School Student:");
+        String highSchoolName = scanner.nextLine();
+        System.out.println("Enter age of High School Student:");
+        int highSchoolAge = scanner.nextInt();
+        System.out.println("Enter grade level of High School Student:");
+        int highSchoolGradeLevel = scanner.nextInt();
+
+        Student highSchoolStudent = new HighSchoolStudent(highSchoolName, highSchoolAge, highSchoolGradeLevel);
+        scanner.nextLine();
+        System.out.println("\nEnter name of College Student:");
+        String collegeName = scanner.nextLine();
+        System.out.println("Enter age of College Student:");
+        int collegeAge = scanner.nextInt();
+        scanner.nextLine(); 
+        System.out.println("Enter major of College Student:");
+        String collegeMajor = scanner.nextLine();
+
+        Student collegeStudent = new CollegeStudent(collegeName, collegeAge, collegeMajor);
+        System.out.println("\nHigh School Student Details:");
+        highSchoolStudent.getDetails();
+        System.out.println("\nCollege Student Details:");
+        collegeStudent.getDetails();
+
+        scanner.close();
+    }
 }
+
