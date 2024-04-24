@@ -9,6 +9,8 @@ public class Pricing {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		Validation v1=new Validation();	
+		
+		//TotalPriceCalculator(double n1,double n2,double n3);
 		System.out.println("Welcome to our store!");
 		System.out.println("What product would you like to get?");
 		System.out.println("1. Laptop");
@@ -31,9 +33,10 @@ public class Pricing {
 				break;
 			case 0:
 				System.out.println("Exiting...");
-				return;
+				continue;
 			default:
-				System.out.println("Invalid choice!");
+				System.out.println("Invalid choice!");	
+				continue;
 			}
 		}
 	}
@@ -42,7 +45,7 @@ public class Pricing {
 class Store1 {
 	public static void getLap() {
 		Scanner scanner = new Scanner(System.in);
-		Validation v1=new Validation();		
+		Validation v1=new Validation();	
 		while(true) {
 			System.out.println("Enter no: 1 for Dell");
 			System.out.println("Enter no: 2 for Lenovo");
@@ -68,15 +71,17 @@ class Store1 {
 				break;
 			case 0:
 				System.out.println("Exiting...");
-				return;
+				continue;
 			default:
 				System.out.println("Invalid choice!");
+				continue;
 			}
 		}
 	}
 	public static void getLaptop1() {
 		Scanner sc = new Scanner(System.in);
 		Validation v1 = new Validation();  
+		TotalPrice tp = new TotalPrice();
 		String name,model,processor;
 		int ram,storage;
 
@@ -149,15 +154,18 @@ class Store1 {
 			System.out.println("Discount Applied: " + (discount * 100) + "%");
 			System.out.printf("Discount Amount: $%.2f%n", discountedAmount);
 			System.out.printf("Discounted Price: $%.2f%n", discountedPrice);
+			tp.TotalPriceCalculator(discountedPrice);
 		} else {
 			System.out.println("Laptop that you have Picked:");
 			System.out.println("Sorry, No Discount Applied!");
 			System.out.println(laptop);
 			System.out.println("Total Price: $" + totalPrice);
+			tp.TotalPriceCalculator(totalPrice);
 		}
 	}
 	public static void getLaptop2() {
 		Scanner sc = new Scanner(System.in);
+		TotalPrice tp = new TotalPrice();
 		Validation v1 = new Validation();  
 		String name,model,processor;
 		int ram,storage;
@@ -230,14 +238,17 @@ class Store1 {
 			System.out.printf("Discount Amount: $" + "%.2f", discountedAmount);
 			System.out.println();
 			System.out.printf("Discounted Price: $%.2f%n", discountedPrice);
+			tp.TotalPriceCalculator(discountedPrice);
 		} else {
 			System.out.println("Laptop that you have Picked:");
 			System.out.println("Sorry, No Discount Applied!");
 			System.out.println(laptop);
 			System.out.println("Total Price: $" + totalPrice);
+			tp.TotalPriceCalculator(totalPrice);
 		}
 	}
 	public static void getLaptop3() {
+		TotalPrice tp = new TotalPrice();
 		Scanner sc = new Scanner(System.in);
 		Validation v1 = new Validation();  
 		String name,model,processor;
@@ -312,11 +323,13 @@ class Store1 {
 			System.out.printf("Discount Amount: $" + "%.2f", discountedAmount);
 			System.out.println();
 			System.out.printf("Discounted Price: $%.2f%n", discountedPrice);
+			tp.TotalPriceCalculator(discountedPrice);
 		} else {
 			System.out.println("Laptop that you have Picked:");
 			System.out.println("Sorry, No Discount Applied!");
 			System.out.println(laptop);
 			System.out.println("Total Price: $" + totalPrice);
+			tp.TotalPriceCalculator(totalPrice);
 		}
 	}
 }
@@ -324,6 +337,7 @@ class Store1 {
 class Store2 {
 	public static void getCloth() {
 		Scanner scanner = new Scanner(System.in);
+		TotalPrice tp = new TotalPrice();
 		System.out.println("Enter no: 1 for OverSized Tees");
 		System.out.println("Enter no: 2 for Pant");
 		System.out.println("Enter no: 3 for Shirt");
@@ -346,6 +360,7 @@ class Store2 {
 
 	public static void getClothes1() {
 		Scanner sc = new Scanner(System.in);
+		TotalPrice tp = new TotalPrice();
 		Validation v1 = new Validation();  
 		String type,material,size,color;
 		while (true) {
@@ -405,11 +420,13 @@ class Store2 {
 			System.out.println("Discount Amount: $ " + discountedAmount);
 			System.out.printf("Discounted Price: $" +"%.2f", discountedPrice);
 			System.out.println();
+			tp.TotalPriceCalculator(discountedPrice);
 		} else {
 			System.out.println("Clothes that you have Picked:");
 			System.out.println("Sorry No Discount Applied!");
 			System.out.println(clothes);
 			System.out.println("Total Price: $" + totalPrice);
+			tp.TotalPriceCalculator(totalPrice);
 		}
 	}
 
@@ -417,6 +434,7 @@ class Store2 {
 	public static void getClothes2() {
 		Scanner sc = new Scanner(System.in);
 		Validation v1 = new Validation();  
+		TotalPrice tp = new TotalPrice();
 		String type,material,size,color;
 		while (true) {
 			System.out.println("Enter Type Name:");
@@ -475,17 +493,20 @@ class Store2 {
 			System.out.println("Discount Amount: $ " + discountedAmount);
 			System.out.printf("Discounted Price: $" +"%.2f", discountedPrice);
 			System.out.println();
+			tp.TotalPriceCalculator(discountedPrice);
 		}else {
 			System.out.println("Clothes that you have Picked:");
 			System.out.println("Sorry No Discount Applied!");
 			System.out.println(clothes);
 			System.out.println("Total Price: $" + totalPrice);
+			tp.TotalPriceCalculator(totalPrice);
 		}
 	}
 
 	public static void getClothes3() {
 		Scanner sc = new Scanner(System.in);
 		Validation v1 = new Validation();  
+		TotalPrice tp = new TotalPrice();
 		String type,material,size,color;
 		while (true) {
 			System.out.println("Enter Type Name:");
@@ -544,11 +565,13 @@ class Store2 {
 			System.out.println("Discount Amount: $ " + discountedAmount);
 			System.out.printf("Discounted Price: $" +"%.2f", discountedPrice);
 			System.out.println();
+			tp.TotalPriceCalculator(discountedPrice);
 		}else {
 			System.out.println("Clothes that you have Picked:");
 			System.out.println("Sorry No Discount Applied!");
 			System.out.println(clothes);
 			System.out.println("Total Price: $" + totalPrice);
+			tp.TotalPriceCalculator(totalPrice);
 		}
 	}
 }
