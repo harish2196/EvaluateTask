@@ -11,6 +11,75 @@ public class Pricing {
 		Validation v1=new Validation();	
 		Store3 store1=new Store3();
 		Store2 store=new Store2();
+		String name,pass;
+		String passWord = null;
+		String userName = null;
+		System.out.println("Do you have any Account: \n(Yes or No)");
+		String choose=scanner.nextLine().toLowerCase();
+		while(!choose.equals("yes") && !choose.equals("no")) {
+			System.out.println("Please Re-enter Valid Input:");
+			choose=scanner.nextLine().toLowerCase();
+		}
+		if(choose.equals("no")) {
+			System.out.println("Please Sign Up");			
+			while (true) {
+				System.out.println("Enter UserName:");
+				userName = scanner.nextLine();
+				if (!v1.validateString(userName)) {
+					System.out.println("Invalid Username Name!");
+				} else {
+					break; 
+				}
+			}	
+			while (true) {
+				System.out.println("Enter PassWord:");
+				passWord= scanner.nextLine();
+				if (!v1.isSpecialChar(passWord)) {
+					System.out.println("Invalid PassWord Name!");
+				} else {
+					break; 
+				}
+			}
+
+			
+
+			System.out.println("Signed Successfully!");
+			System.out.println("Please Log In!");
+			System.out.println("Enter The Name: ");
+			name=scanner.next();
+			while(!name.matches(userName)) {
+				System.out.println("Please Enter Valid UserName:");
+				name=scanner.next();
+			}
+			System.out.println("Enter The Password: ");
+			pass=scanner.next();
+			while(!pass.matches(passWord)) {
+				System.out.println("Please Enter Valid PassWord:");
+				pass=scanner.next();
+			}
+		} else if (choose.equals("yes")){
+			System.out.println("Please Log In!");
+			while (true) {
+				System.out.println("Enter UserName:");
+				name = scanner.nextLine();
+				if (!v1.validateString(name)) {
+					System.out.println("Invalid Username Name!");
+				} else {
+					break; 
+				}
+			}
+			while (true) {
+				System.out.println("Enter PassWord:");
+				pass= scanner.nextLine();
+				if (!v1.isSpecialChar(pass)) {
+					System.out.println("Invalid PassWord Name!");
+				} else {
+					break; 
+				}
+			}
+
+		}
+		System.out.println("Logg In Succesfully!");
 		System.out.println("Welcome to our store!");
 		System.out.println("What product would you like to get?");
 		System.out.println("1. Laptop");

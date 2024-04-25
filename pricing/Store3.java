@@ -57,7 +57,6 @@ public class Store3 {
                 break;
             }
         }
-
         while (true) {
             System.out.println("Enter Storage:");
             storage = sc.nextInt();
@@ -139,7 +138,6 @@ public class Store3 {
         System.out.println("You've selected a Mobile!");
         Mobile mobile = new Mobile(processor, ram, storage, 99.99);
         double totalPrice = mobile.getPrice1();
-
         if (totalPrice > 100.00) {
             double discount = 0.10;
             double discountedAmount = totalPrice * discount;
