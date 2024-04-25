@@ -16,7 +16,7 @@ class Store1 {
 			System.out.println("Enter your choice:");
 			int choice = scanner.nextInt();
 			if(!v1.Numerics(choice)) {
-				System.out.println("Negative Number!");
+				System.err.println("Negative Number!");
 				System.out.println("Enter your choice:");
 				choice = scanner.nextInt();
 			}
@@ -52,7 +52,7 @@ class Store1 {
 			model = sc.nextLine();
 
 			if (!v1.isSpecialChar(model)) {
-				System.out.println("Invalid model Name!");
+				System.err.println("Invalid model Name!");
 			} else {
 				break; 
 			}
@@ -63,7 +63,7 @@ class Store1 {
 			processor = sc.nextLine();
 
 			if (!v1.isSpecialChar(processor)) {
-				System.out.println("Invalid Processor Name!");
+				System.err.println("Invalid Processor Name!");
 			} else {
 				break; 
 			}
@@ -74,7 +74,7 @@ class Store1 {
 			ram = sc.nextInt();
 
 			if (!v1.Numerics(ram)) {
-				System.out.println("Invalid RAM Name!");
+				System.err.println("Invalid RAM Name!");
 			} else {
 				break; 
 			}
@@ -85,7 +85,7 @@ class Store1 {
 			storage = sc.nextInt();
 
 			if (!v1.Numerics(storage)) {
-				System.out.println("Invalid Storage Name!");
+				System.err.println("Invalid Storage Name!");
 			} else {
 				break; 
 			}
@@ -131,7 +131,7 @@ class Store1 {
 			model = sc.nextLine();
 
 			if (!v1.isSpecialChar(model)) {
-				System.out.println("Invalid model Name!");
+				System.err.println("Invalid model Name!");
 			} else {
 				break; 
 			}
@@ -142,7 +142,7 @@ class Store1 {
 			processor = sc.nextLine();
 
 			if (!v1.isSpecialChar(processor)) {
-				System.out.println("Invalid Processor Name!");
+				System.err.println("Invalid Processor Name!");
 			} else {
 				break; 
 			}
@@ -153,7 +153,7 @@ class Store1 {
 			ram = sc.nextInt();
 
 			if (!v1.Numerics(ram)) {
-				System.out.println("Invalid RAM Name!");
+				System.err.println("Invalid RAM Name!");
 			} else {
 				break; 
 			}
@@ -164,7 +164,7 @@ class Store1 {
 			storage = sc.nextInt();
 
 			if (!v1.Numerics(storage)) {
-				System.out.println("Invalid Storage Name!");
+				System.err.println("Invalid Storage Name!");
 			} else {
 				break; 
 			}
@@ -209,7 +209,7 @@ class Store1 {
 			model = sc.nextLine();
 
 			if (!v1.isSpecialChar(model)) {
-				System.out.println("Invalid model Name!");
+				System.err.println("Invalid model Name!");
 			} else {
 				break; 
 			}
@@ -220,7 +220,7 @@ class Store1 {
 			processor = sc.nextLine();
 
 			if (!v1.isSpecialChar(processor)) {
-				System.out.println("Invalid Processor Name!");
+				System.err.println("Invalid Processor Name!");
 			} else {
 				break; 
 			}
@@ -231,7 +231,7 @@ class Store1 {
 			ram = sc.nextInt();
 
 			if (!v1.Numerics(ram)) {
-				System.out.println("Invalid RAM Name!");
+				System.err.println("Invalid RAM Name!");
 			} else {
 				break; 
 			}
@@ -242,7 +242,7 @@ class Store1 {
 			storage = sc.nextInt();
 
 			if (!v1.Numerics(storage)) {
-				System.out.println("Invalid Storage Name!");
+				System.err.println("Invalid Storage Name!");
 			} else {
 				break; 
 			}

@@ -14,10 +14,10 @@ public class Pricing {
 		String name,pass;
 		String passWord = null;
 		String userName = null;
-		System.out.println("Do you have any Account: \n(Yes or No)");
+		System.out.println("Do you have any Account in our Store: \n(Yes or No)");
 		String choose=scanner.nextLine().toLowerCase();
 		while(!choose.equals("yes") && !choose.equals("no")) {
-			System.out.println("Please Re-enter Valid Input:");
+			System.err.println("Please Re-enter Valid Input:");
 			choose=scanner.nextLine().toLowerCase();
 		}
 		if(choose.equals("no")) {
@@ -26,7 +26,7 @@ public class Pricing {
 				System.out.println("Enter UserName:");
 				userName = scanner.nextLine();
 				if (!v1.validateString(userName)) {
-					System.out.println("Invalid Username Name!");
+					System.err.println("Invalid Username Name!");
 				} else {
 					break; 
 				}
@@ -35,26 +35,23 @@ public class Pricing {
 				System.out.println("Enter PassWord:");
 				passWord= scanner.nextLine();
 				if (!v1.isSpecialChar(passWord)) {
-					System.out.println("Invalid PassWord Name!");
+					System.err.println("Invalid PassWord Name!");
 				} else {
 					break; 
 				}
 			}
-
-			
-
 			System.out.println("Signed Successfully!");
 			System.out.println("Please Log In!");
 			System.out.println("Enter The Name: ");
 			name=scanner.next();
 			while(!name.matches(userName)) {
-				System.out.println("Please Enter Valid UserName:");
+				System.err.println("Please Enter Valid UserName:");
 				name=scanner.next();
 			}
 			System.out.println("Enter The Password: ");
 			pass=scanner.next();
 			while(!pass.matches(passWord)) {
-				System.out.println("Please Enter Valid PassWord:");
+				System.err.println("Please Enter Valid PassWord:");
 				pass=scanner.next();
 			}
 		} else if (choose.equals("yes")){
@@ -63,7 +60,7 @@ public class Pricing {
 				System.out.println("Enter UserName:");
 				name = scanner.nextLine();
 				if (!v1.validateString(name)) {
-					System.out.println("Invalid Username Name!");
+					System.err.println("Invalid Username Name!");
 				} else {
 					break; 
 				}
@@ -72,7 +69,7 @@ public class Pricing {
 				System.out.println("Enter PassWord:");
 				pass= scanner.nextLine();
 				if (!v1.isSpecialChar(pass)) {
-					System.out.println("Invalid PassWord Name!");
+					System.err.println("Invalid PassWord Name!");
 				} else {
 					break; 
 				}
@@ -90,7 +87,7 @@ public class Pricing {
 			System.out.println("Enter your choice(1, 2 or 0):");
 			int choice = scanner.nextInt();
 			if(!v1.Numerics(choice)) {
-				System.out.println("Negative Number!");
+				System.err.println("Negative Number!");
 				System.out.println("Enter your choice:");
 				choice = scanner.nextInt();
 			}
@@ -105,10 +102,10 @@ public class Pricing {
 				store1.getMobile();
 				break;
 			case 0:
-				System.out.println("Exiting...");
+				System.err.println("Exiting...");
 				continue;
 			default:
-				System.out.println("Invalid choice!");	
+				System.err.println("Invalid choice!");	
 				continue;
 			}
 		}

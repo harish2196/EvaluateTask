@@ -41,7 +41,7 @@ public class Store3 {
             processor = sc.nextLine();
 
             if (!v1.validateString(processor)) {
-                System.out.println("Invalid Processor Name!");
+                System.err.println("Invalid Processor Name!");
             } else {
                 break;
             }
@@ -52,7 +52,7 @@ public class Store3 {
             ram = sc.nextInt();
 
             if (!v1.Numerics(ram)) {
-                System.out.println("Invalid RAM Name!");
+                System.err.println("Invalid RAM Name!");
             } else {
                 break;
             }
@@ -62,7 +62,7 @@ public class Store3 {
             storage = sc.nextInt();
 
             if (!v1.Numerics(storage)) {
-                System.out.println("Invalid Storage Name!");
+                System.err.println("Invalid Storage Name!");
             } else {
                 break;
             }
@@ -108,7 +108,7 @@ public class Store3 {
             processor = sc.nextLine();
 
             if (!v1.validateString(processor)) {
-                System.out.println("Invalid Processor Name!");
+                System.err.println("Invalid Processor Name!");
             } else {
                 break;
             }
@@ -118,7 +118,7 @@ public class Store3 {
             ram = sc.nextInt();
 
             if (!v1.Numerics(ram)) {
-                System.out.println("Invalid RAM Name!");
+                System.err.println("Invalid RAM Name!");
             } else {
                 break;
             }
@@ -129,7 +129,7 @@ public class Store3 {
             storage = sc.nextInt();
 
             if (!v1.Numerics(storage)) {
-                System.out.println("Invalid Storage Name!");
+                System.err.println("Invalid Storage Name!");
             } else {
                 break;
             }
@@ -174,7 +174,7 @@ public class Store3 {
             processor = sc.nextLine();
 
             if (!v1.validateString(processor)) {
-                System.out.println("Invalid Processor Name!");
+                System.err.println("Invalid Processor Name!");
             } else {
                 break;
             }
@@ -185,7 +185,7 @@ public class Store3 {
             ram = sc.nextInt();
 
             if (!v1.Numerics(ram)) {
-                System.out.println("Invalid RAM Name!");
+                System.err.println("Invalid RAM Name!");
             } else {
                 break;
             }
@@ -196,7 +196,7 @@ public class Store3 {
             storage = sc.nextInt();
 
             if (!v1.Numerics(storage)) {
-                System.out.println("Invalid Storage Name!");
+                System.err.println("Invalid Storage Name!");
             } else {
                 break;
             }

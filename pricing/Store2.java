@@ -26,7 +26,7 @@ public class Store2 {
 			getClothes3();
 			break;
 		default:
-			System.out.println("Invalid choice!");
+			System.err.println("Invalid choice!");
 		}
 	}
 
@@ -41,7 +41,7 @@ public class Store2 {
 			material = sc.nextLine();
 
 			if (!v1.isSpecialChar(material)) {
-				System.out.println("Invalid Material Name!");
+				System.err.println("Invalid Material Name!");
 			} else {
 				break; 
 			}
@@ -52,18 +52,18 @@ public class Store2 {
 			color = sc.nextLine();
 
 			if (!v1.isSpecialChar(color)) {
-				System.out.println("Invalid Color Name!");
+				System.err.println("Invalid Color Name!");
 			} else {
 				break; 
 			}
 		}
 
 		while (true) {
-			System.out.println("Enter Size:");
+			System.out.println("Enter Size(S , L , XL & XLL):");
 			size = sc.nextLine();
 
 			if (!v1.isSpecialChar(size)) {
-				System.out.println("Invalid Size Name!");
+				System.err.println("Invalid Size Name!");
 			} else {
 				break; 
 			}
@@ -111,7 +111,7 @@ public class Store2 {
 			material = sc.nextLine();
 
 			if (!v1.isSpecialChar(material)) {
-				System.out.println("Invalid Material Name!");
+				System.err.println("Invalid Material Name!");
 			} else {
 				break; 
 			}
@@ -122,18 +122,18 @@ public class Store2 {
 			color = sc.nextLine();
 
 			if (!v1.isSpecialChar(color)) {
-				System.out.println("Invalid Color Name!");
+				System.err.println("Invalid Color Name!");
 			} else {
 				break; 
 			}
 		}
 
 		while (true) {
-			System.out.println("Enter Size:");
+			System.out.println("Enter Size(S , L , XL & XLL):");
 			size = sc.nextLine();
 
 			if (!v1.isSpecialChar(size)) {
-				System.out.println("Invalid Size Name!");
+				System.err.println("Invalid Size Name!");
 			} else {
 				break; 
 			}
@@ -180,7 +180,7 @@ public class Store2 {
 			material = sc.nextLine();
 
 			if (!v1.isSpecialChar(material)) {
-				System.out.println("Invalid Material Name!");
+				System.err.println("Invalid Material Name!");
 			} else {
 				break; 
 			}
@@ -191,18 +191,18 @@ public class Store2 {
 			color = sc.nextLine();
 
 			if (!v1.isSpecialChar(color)) {
-				System.out.println("Invalid Color Name!");
+				System.err.println("Invalid Color Name!");
 			} else {
 				break; 
 			}
 		}
 
 		while (true) {
-			System.out.println("Enter Size:");
+			System.out.println("Enter Size(S , L , XL & XLL):");
 			size = sc.nextLine();
 
 			if (!v1.isSpecialChar(size)) {
-				System.out.println("Invalid Size Name!");
+				System.err.println("Invalid Size Name!");
 			} else {
 				break; 
 			}
