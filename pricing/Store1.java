@@ -1,10 +1,17 @@
 package com.chainsys.pricing;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+
+
 
 import com.chainsys.pojo.Validation;
 
+
+
 class Store1 {
+	 private static List<Item> purchasedProducts = new ArrayList<>();
 	public static void getLap() {
 		Scanner scanner = new Scanner(System.in);
 		Validation v1=new Validation();	
@@ -33,7 +40,7 @@ class Store1 {
 				break;
 			case 0:
 				System.out.println("Exiting...");
-				continue;
+				return;
 			default:
 				System.out.println("Invalid choice!");
 				continue;
@@ -56,6 +63,7 @@ class Store1 {
 			} else {
 				break; 
 			}
+			
 		}
 
 		while (true) {
@@ -169,7 +177,6 @@ class Store1 {
 				break; 
 			}
 		}
-
 		System.out.println("You've selected a Laptop!");
 		Laptop laptop = new Laptop( model, processor, ram, storage, 699.99);
 		double totalPrice = laptop.getPrice();    
@@ -247,7 +254,6 @@ class Store1 {
 				break; 
 			}
 		}
-
 		System.out.println("You've selected a Laptop!");
 		Laptop laptop = new Laptop(model, processor, ram, storage, 999.99);
 		double totalPrice = laptop.getPrice();    
@@ -260,7 +266,7 @@ class Store1 {
 			System.out.println("********************Bill************************");
 			System.out.println("Total Price: $" + totalPrice);
 			System.out.printf("Discount Applied: " + "%.2f",(discount * 100) + "%");
-			System.out.println();
+			System.out.println();	
 			System.out.printf("Discount Amount: $" + "%.2f", discountedAmount);
 			System.out.println();
 			System.out.printf("Discounted Price: $%.2f%n", discountedPrice);

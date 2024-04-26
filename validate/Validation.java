@@ -1,19 +1,10 @@
-package com.chainsys.pricing;
+package com.chainsys.validate;
+
 
 import java.util.regex.Pattern;
 
 public class Validation {
-	public boolean isNumeric(String input) {
-	    String regex = "\\d+";
-	    if (input.matches(regex)) {
-	        return true; 
-	    } else {
-	        System.out.println("Invalid Data. Please enter a numeric value.");
-	        return false; 
-	    }
-	}
-
-	public boolean isDle(double regNo1) {
+	public boolean Numerics(int regNo1) {
 		if(regNo1 < 0)
 		{
 			System.out.println("Invalid Data");
@@ -23,10 +14,10 @@ public class Validation {
 	}
 	
 	public static boolean validateString(String input) {
-		String regex = "^[a-zA-Z0-9]+$";
+        String regex = "^[a-zA-Z ]+$";
         Pattern pattern = Pattern.compile(regex);       
         if (!pattern.matcher(input).matches()) {
-            System.out.println("Error: Input should contains only spaces and numbers.");
+            System.out.println("Error: Input should contain only spaces and letters.");
             return false;
         } else {
             return true;
@@ -68,7 +59,6 @@ public class Validation {
 		}
 		return true;
 	}
-	
 
 }
 
