@@ -4,17 +4,14 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.Scanner;
 
-public class ReadWriteMethods {
+public class ReadWriteMethods implements FileReadWriteOperations{
 	
 
-	public static void write(String userName, String password) {
+	public void write(String userName, String password) {
 
 		try {
-			FileWriter write = new FileWriter("D:\\Files\\demo.txt",true);
-			
-			
-			String str = userName + " " + password+"\n";
-			
+			FileWriter write = new FileWriter("D:\\Files\\demo.txt",true);			
+			String str = userName + " " + password+"\n";		
 			write.write(str);
 			write.close();
 		}
@@ -24,7 +21,7 @@ public class ReadWriteMethods {
 		}
 	}
 	
-	public static boolean read(String userName, String password) {
+public  boolean read(String userName, String password) {
 		try {
 			FileReader read = new FileReader("D:\\Files\\demo.txt");
 			

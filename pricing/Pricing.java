@@ -51,14 +51,12 @@ public class Pricing {
 				System.out.println("Enter The Password: ");
 				pass=scanner.next();
 			}
-
 			System.out.println("Logg In Succesfully!");
 			
 		} else if (choose.equals("yes")){
 			System.out.println("Please Log In!");
 			System.out.println("Enter The Name: ");
 			name=scanner.next();
-
 			System.out.println("Enter The Password: ");
 			pass=scanner.next();
 

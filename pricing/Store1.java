@@ -8,10 +8,12 @@ import java.util.Scanner;
 
 import com.chainsys.pojo.Validation;
 
-
+interface gagag{
+	
+}
 
 class Store1 {
-	 private static List<Item> purchasedProducts = new ArrayList<>();
+	public static List<Item> purchasedProducts = new ArrayList<>();
 	public static void getLap() {
 		Scanner scanner = new Scanner(System.in);
 		Validation v1=new Validation();	
@@ -27,7 +29,6 @@ class Store1 {
 				System.out.println("Enter your choice:");
 				choice = scanner.nextInt();
 			}
-
 			switch (choice) {
 			case 1:
 				getLaptop1();
@@ -63,7 +64,7 @@ class Store1 {
 			} else {
 				break; 
 			}
-			
+
 		}
 
 		while (true) {
