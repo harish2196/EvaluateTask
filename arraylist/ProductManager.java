@@ -4,7 +4,7 @@ import com.chainsys.pricing.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 import com.chainsys.pricing.*;
-public class ProductManager {
+public class ProductManager implements Inter {
 	ArrayList<Product> productList= new ArrayList<>();;
 
 	public void addProduct(Product product) {
