@@ -76,7 +76,6 @@ public class ProductManager {
 			System.out.println("Logg In Succesfully!");
 			System.out.println("Welcome to our store!");
 			System.out.println("What product would you like to get?");
-
 			System.out.println("Welcome to Product Manager");
 			System.out.println("1. Add Product");
 			System.out.println("2. View Products");
@@ -87,8 +86,7 @@ public class ProductManager {
 			do {
 				System.out.println("Enter your choice:");
 				choice = scanner.nextInt();
-				scanner.nextLine(); 
-
+				scanner.nextLine();
 				switch (choice) {
 				case 1:
 					System.out.println("Enter Product ID:");
